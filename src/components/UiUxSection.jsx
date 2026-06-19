@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
+import figmaDesign from "../assets/Instagram story - 1.png";
+import loadLagao from "../assets/main-screen.png";
+import soochna from "../assets/iPhone-16-&-17-Pro-Max-7.png";
 
 const projects = [
   {
     title: "Figma designs",
     desc: "Figma portfolio showcasing designs for instagram posts/stories and personal explorations",
-    image:
-      "src/assets/Instagram story - 1.png",
+    image: figmaDesign,
     behance: "https://www.behance.net/gallery/241415881/figma-designs",
     rotate: "0deg",
     glow: "#FF007F",
@@ -14,8 +16,7 @@ const projects = [
   {
     title: "Load Lagao",
     desc: "laundry management app to minimize conflicts and make hostel laundry easier.",
-    image:
-      "src/assets/main screen.png",
+    image: loadLagao,
     behance: "https://www.behance.net/gallery/246597893/Load-Lagao-laundry-service-app-design",
     rotate: "0deg",
     glow: "#00F0FF",
@@ -23,8 +24,7 @@ const projects = [
   {
     title: "Soochna",
     desc: "App designed regarding student pain points to make hostel life easier",
-    image:
-      "src/assets/iPhone 16 & 17 Pro Max - 7.png",
+    image: soochna,
     behance: "https://behance.net/",
     rotate: "0deg",
     glow: "#9D00FF",

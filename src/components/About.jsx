@@ -42,7 +42,7 @@ export default function About() {
               colors={["#9D00FF", "#FF007F", "#38bdf8"]}
             >
               <img
-                
+                src={myImage}
                 alt="profile"
                 className="
                   w-[270px]

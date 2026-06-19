@@ -1,5 +1,9 @@
 import React, { useMemo, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
+import audioAtlas from "../assets/audioatlas.png";
+import creativityClub from "../assets/cc.png";
+import dice from "../assets/dice.png";
+import rocketAir from "../assets/rocketair.png";
 
 /* fallback */
 const FALLBACK =
@@ -13,22 +17,22 @@ const AUTO_SPEED = 0.2;
 const projects = [
   {
     title: "Audio Atlas",
-    img: "src/assets/audioatlas.png",
+    img: audioAtlas,
     link: "https://harveejain.github.io/audio-atlas/",
   },
   {
     title: "Creativity Club official website",
-    img: "src/assets/cc.png",
+    img: creativityClub,
     link: "https://cc-jy3r.vercel.app/",
   },
   {
     title: "Dice Simulator",
-    img: "src/assets/dice.png",
+    img: dice,
     link: "https://harveejain.github.io/dice-simulator/",
   },
   {
     title: "Rocket Air Clone",
-    img: "src/assets/rocketair.png",
+    img: rocketAir,
     link: "https://harveejain.github.io/RocketAir-clone/",
   },
 ];

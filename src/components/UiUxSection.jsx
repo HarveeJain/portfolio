@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
-import figmaDesign from "../assets/Instagram story - 1.png";
-import loadLagao from "../assets/main-screen.png";
+import figmaDesign from "../assets/Instagram-story-1.png";
+import loadLagao from "../assets/Main-screen.png";
 import soochna from "../assets/iPhone-16-&-17-Pro-Max-7.png";
 
 const projects = [

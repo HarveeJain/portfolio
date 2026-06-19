@@ -5,7 +5,6 @@ import creativityClub from "../assets/cc.png";
 import dice from "../assets/dice.png";
 import rocketAir from "../assets/rocketair.png";
 
-/* fallback */
 const FALLBACK =
   "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='220'><rect width='100%' height='100%' fill='%230b0813'/><text x='50%' y='50%' fill='%23fff' font-size='14' text-anchor='middle' dominant-baseline='middle'>Project</text></svg>";
 
@@ -45,8 +44,8 @@ export default function ProjectsSection() {
   const startRot = useRef(0);
   const frame = useRef(null);
 
-  /* responsive radius */
-  const RADIUS = typeof window !== "undefined" && window.innerWidth < 640 ? 140 : 180;
+  // ✅ safer responsive radius (no SSR crash, no flicker)
+  const RADIUS = 160;
 
   const cards = useMemo(() => {
     return projects.map((p, i) => {
@@ -56,7 +55,7 @@ export default function ProjectsSection() {
         transform: `rotateY(${angle}deg) translateZ(${RADIUS}px)`,
       };
     });
-  }, [RADIUS]);
+  }, []);
 
   useEffect(() => {
     const animate = () => {
@@ -97,7 +96,7 @@ export default function ProjectsSection() {
   };
 
   return (
-    <section className="w-full py-12 md:py-24 flex flex-col items-center relative z-10 pb-32 overflow-visible">
+    <section className="w-full py-12 md:py-24 flex flex-col items-center relative z-20 pb-40 overflow-visible">
 
       {/* TITLE */}
       <motion.div
@@ -115,7 +114,6 @@ export default function ProjectsSection() {
       <div
         className="
           relative
-          cursor-grab active:cursor-grabbing
           w-full
           h-[280px] sm:h-[340px] md:h-[420px]
           overflow-visible
@@ -131,10 +129,18 @@ export default function ProjectsSection() {
         onTouchMove={(e) => onMove(e.touches[0])}
         onTouchEnd={onUp}
       >
+        {/* CENTER ORIGIN FIX */}
         <div
           ref={wheelRef}
-          className="relative w-full h-full"
-          style={{ transformStyle: "preserve-3d" }}
+          className="
+            relative
+            w-full
+            h-full
+            flex
+            items-center
+            justify-center
+            [transform-style:preserve-3d]
+          "
         >
           {cards.map((p, i) => (
             <a
@@ -143,8 +149,7 @@ export default function ProjectsSection() {
               target="_blank"
               rel="noreferrer"
               className="
-                absolute left-1/2 top-1/2
-                -translate-x-1/2 -translate-y-1/2
+                absolute
 
                 w-[140px] sm:w-[170px] md:w-[220px]
                 h-[200px] sm:h-[250px] md:h-[300px]

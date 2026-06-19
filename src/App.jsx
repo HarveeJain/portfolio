@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import { motion } from "framer-motion";
 import UiUxSection from "./components/UiUxSection";
 import ProjectsSection from "./components/WebProjectsSection";
+import neonImg from "./assets/neonimg.jpg";
 
 export default function App() {
   const mainRef = useRef(null);
@@ -41,7 +42,7 @@ export default function App() {
         <section className="fixed inset-0 flex items-center justify-center z-50 bg-black">
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('src/assets/neonimg.jpg')" }}
+            style={{ backgroundImage: `url(${neonImg})` }}
           />
 
           <div className="absolute inset-0 bg-black/40" />

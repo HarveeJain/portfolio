@@ -9,6 +9,7 @@ export default function About() {
       id="about"
       className="w-full px-5 sm:px-6 md:px-12 lg:px-20 py-8 md:py-14"
     >
+      {/* IMAGE + TEXT GRID */}
       <motion.div
         initial="hidden"
         whileInView="show"
@@ -72,15 +73,19 @@ export default function About() {
           }}
           className="flex justify-center"
         >
-          <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-stroke leading-relaxed text-center lg:text-left space-y-5 max-w-2xl">
-            <p>
+          <div className="max-w-2xl text-center lg:text-left space-y-5">
+            
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/80 leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)]">
               I am a passionate developer who loves building interactive and
-              visually engaging web experiences.
+              visually engaging web experiences. My focus is on creating modern,
+              high-performance interfaces that combine both logic and aesthetics.
             </p>
 
-            <p>
-              I specialize in frontend development, animations, and immersive UI
-              design systems.
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/80 leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)]">
+              I specialize in frontend development, crafting smooth animations,
+              responsive layouts, and immersive UI experiences. I enjoy
+              experimenting with creative visual effects and pushing the
+              boundaries of web design.
             </p>
           </div>
         </motion.div>

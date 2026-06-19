@@ -7,14 +7,18 @@ export default function About() {
   return (
     <section
       id="about"
-      className="w-full px-6 md:px-12 lg:px-20"
+      className="w-full px-5 sm:px-6 md:px-12 lg:px-20 py-8 md:py-14"
     >
-      {/* IMAGE + DESCRIPTION */}
       <motion.div
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.3 }}
-        className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-10 items-center pb-0"
+        className="
+          max-w-7xl mx-auto
+          grid grid-cols-1 lg:grid-cols-[1fr_1fr]
+          gap-6 md:gap-12
+          items-center
+        "
       >
         {/* IMAGE */}
         <motion.div
@@ -27,7 +31,7 @@ export default function About() {
               transition: { duration: 1, ease: "easeOut" },
             },
           }}
-          className="flex justify-start lg:pr-6"
+          className="flex justify-center lg:justify-start"
         >
           <div className="flex justify-center w-fit p-2">
             <BorderGlow
@@ -45,13 +49,10 @@ export default function About() {
                 src={myImage}
                 alt="profile"
                 className="
-                  w-[270px]
-                  md:w-[320px]
-                  h-[540px]
-                  md:h-[400px]
-                  object-cover
-                  object-top
-                  block
+                  w-[70vw] sm:w-[60vw]
+                  max-w-[320px]
+                  aspect-[3/4]
+                  object-cover object-top
                   rounded-[35px]
                 "
               />
@@ -66,28 +67,27 @@ export default function About() {
             show: {
               opacity: 1,
               x: 0,
-              transition: { duration: 1, delay: 0.3 },
+              transition: { duration: 1, delay: 0.2 },
             },
           }}
+          className="flex justify-center"
         >
-          <div className="text-lg md:text-2xl text-stroke leading-relaxed text-justify space-y-6">
+          <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-stroke leading-relaxed text-center lg:text-left space-y-5 max-w-2xl">
             <p>
               I am a passionate developer who loves building interactive and
-              visually engaging web experiences. My focus is on creating modern,
-              high-performance interfaces that combine both logic and aesthetics.
+              visually engaging web experiences.
             </p>
 
             <p>
-              I specialize in frontend development, crafting smooth animations,
-              responsive layouts, and immersive UI experiences. I enjoy
-              experimenting with creative visual effects and pushing the
-              boundaries of web design.
+              I specialize in frontend development, animations, and immersive UI
+              design systems.
             </p>
           </div>
         </motion.div>
       </motion.div>
 
-      <div>
+      {/* SKILLS */}
+      <div className="mt-10 md:mt-16">
         <SkillsLoop />
       </div>
     </section>

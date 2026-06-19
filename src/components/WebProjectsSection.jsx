@@ -17,9 +17,9 @@ const projects = [
     link: "https://harveejain.github.io/audio-atlas/",
   },
   {
-    title: "Time Delta",
-    img: "",
-    link: "#",
+    title: "Creativity Club official website",
+    img: "src/assets/cc.png",
+    link: "https://cc-jy3r.vercel.app/",
   },
   {
     title: "Dice Simulator",

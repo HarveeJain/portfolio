@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import BorderGlow from "./BorderGlow";
-import myImage from "../assets/myimage.jpeg";
+import myImage from "../assets/myImage.jpeg";
 import SkillsLoop from "./SkillsLoop";
 
 export default function About() {
